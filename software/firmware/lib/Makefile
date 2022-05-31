@@ -60,6 +60,7 @@ CFLAGS = -v3 #                              silicon version
 CFLAGS += --endian=little #                 for data and code, both (big, little) is possible
 CFLAGS += --hardware_mac=on #               use Multiply and Accumulate Unit (no division though)
 
+
 # Compile Options
 CFLAGS += --c99 #                           C-Standard
 CFLAGS += --float_operations_allowed=none # usage of FP results in compile-error
@@ -143,7 +144,7 @@ $(TARGET): $(OBJECTS) $(LINKER_COMMAND_FILE)
 	@echo ''
 	@echo 'Building target: $@'
 	@echo 'Invoking: PRU Linker'
-	$(PRU_CGT)/bin/clpru $(CFLAGS) -z -i$(PRU_CGT)/lib -i$(PRU_CGT)/include $(LFLAGS) -o $(TARGET) $(OBJECTS) -m$(MAP) $(LINKER_COMMAND_FILE) $(LIBS)
+	$(PRU_CGT)/bin $(CFLAGS) -z -i$(PRU_CGT)/lib -i$(PRU_CGT)/include $(LFLAGS) -o $(TARGET) $(OBJECTS) -m$(MAP) $(LINKER_COMMAND_FILE) $(LIBS)
 	@echo 'Finished building target'
 
 # Invokes the compiler on all c files in the directory to create the object files
@@ -152,14 +153,14 @@ $(GEN_DIR)/%.object: %.c
 	@echo ''
 	@echo 'Building file: $<'
 	@echo 'Invoking: PRU Compiler'
-	$(PRU_CGT)/bin/clpru --include_path=$(PRU_CGT)/include $(INCLUDE) $(CFLAGS) -D PRU$(PRU_NUM) -fe $@ $<
+	$(PRU_CGT)/bin --include_path=$(PRU_CGT)/include $(INCLUDE) $(CFLAGS) -D PRU$(PRU_NUM) -fe $@ $<
 
 $(GEN_DIR)/%.object: %.asm
 	@mkdir -p $(GEN_DIR)
 	@echo ''
 	@echo 'Building file: $<'
 	@echo 'Invoking: PRU Compiler'
-	$(PRU_CGT)/bin/clpru --include_path=$(PRU_CGT)/include $(INCLUDE) $(CFLAGS) -D PRU$(PRU_NUM) -fe $@ $<
+	$(PRU_CGT)/bin --include_path=$(PRU_CGT)/include $(INCLUDE) $(CFLAGS) -D PRU$(PRU_NUM) -fe $@ $<
 
 
 .PHONY: clean
