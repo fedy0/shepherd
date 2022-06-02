@@ -28,7 +28,7 @@
 
 # Very simple makefile to cross-compile for PRU
 
-PRU_SUPPORT ?= /home/fedy0/Documents/repo/pru-software-support-package
+#PRU_SUPPORT ?= /home/fedy0/Documents/repo/pru-software-support-package
 
 # Common flags
 CROSS_COMPILE ?= pru-
