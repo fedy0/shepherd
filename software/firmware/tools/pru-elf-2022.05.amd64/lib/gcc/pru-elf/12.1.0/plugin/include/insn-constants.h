@@ -1,0 +1,54 @@
+/* Generated automatically by the program `genconstants'
+   from the machine description file `md'.  */
+
+#ifndef GCC_INSN_CONSTANTS_H
+#define GCC_INSN_CONSTANTS_H
+
+#define LAST_NONIO_GP_REGNUM 119
+#define PROLOGUE_TEMP_REGNUM 4
+#define LOOPCNTR_REGNUM 128
+#define MULDST_REGNUM 104
+#define FP_REGNUM 16
+#define PC_REGNUM 132
+#define R31_REGNUM 124
+#define MULSRC1_REGNUM 116
+#define ADDR_SPACE_REGIO 1
+#define HARD_FRAME_POINTER_REGNUM FP_REGNUM
+#define FIRST_CALLEE_SAVED_REGNUM 12
+#define FIRST_RETVAL_REGNUM 56
+#define LAST_GP_REGNUM 132
+#define R30_REGNUM 120
+#define LAST_ARG_REGNUM 119
+#define RA_REGNUM 14
+#define MULSRC0_REGNUM 112
+#define FRAME_POINTER_REGNUM 136
+#define LAST_CALEE_SAVED_REGNUM 55
+#define ARG_POINTER_REGNUM 140
+#define LAST_RETVAL_REGNUM 60
+#define FIRST_PSEUDO_REGISTER 144
+#define FIRST_ARG_REGNUM 56
+#define STACK_POINTER_REGNUM 8
+
+enum unspec {
+  UNSPEC_LMBD = 0
+};
+#define NUM_UNSPEC_VALUES 1
+extern const char *const unspec_strings[];
+
+enum unspecv {
+  UNSPECV_DELAY_CYCLES_START = 0,
+  UNSPECV_DELAY_CYCLES_END = 1,
+  UNSPECV_DELAY_CYCLES_2X_HI = 2,
+  UNSPECV_DELAY_CYCLES_2X_SI = 3,
+  UNSPECV_DELAY_CYCLES_1 = 4,
+  UNSPECV_LOOP_BEGIN = 5,
+  UNSPECV_LOOP_END = 6,
+  UNSPECV_HALT = 7,
+  UNSPECV_BLOCKAGE = 8,
+  UNSPECV_REGIO_READ = 9,
+  UNSPECV_REGIO_WRITE = 10
+};
+#define NUM_UNSPECV_VALUES 11
+extern const char *const unspecv_strings[];
+
+#endif /* GCC_INSN_CONSTANTS_H */
