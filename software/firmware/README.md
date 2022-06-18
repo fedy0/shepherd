@@ -1,6 +1,6 @@
 # Testing GCC Port
 
-## To test the GCC Port, run the commands below
+To test the GCC Port, run the commands below
 
 ```shell
 git clone -b gcc-cmp https://github.com/fedy0/shepherd.git
