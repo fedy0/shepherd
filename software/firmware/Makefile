@@ -47,8 +47,8 @@ CFLAGS += -minrt
 
 # Per-PRU core flags. The -mmcu option will select the correct linker
 # script and will predefine mcu-specific macros.
-CFLAGS0 += -mmcu=am335x.pru0
-CFLAGS1 += -mmcu=am335x.pru1 -nostdlib -nodefaultlibs -nostartfiles
+CFLAGS0 += -mmcu=am335x.pru0 -DPRU0
+CFLAGS1 += -mmcu=am335x.pru1 -nostdlib -nodefaultlibs -nostartfiles -DPRU1
 
 
 # List of source files to compile for each PRU core.
