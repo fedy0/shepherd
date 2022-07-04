@@ -25,7 +25,6 @@ git clone -b linux-4.19-rproc https://github.com/dinuxbg/pru-software-support-pa
 # 4. Add PRU gcc and binutils to your PATH
 echo "7. Adding PRU GCC supports to path..."
 export PRU_GCC_BIN=$PWD/pru-elf*/bin
-echo $PRU_GCC_BIN
 echo "#PRU GCC  supports" >> ~/.bashrc
 echo "export PRU_GCC=$PRU_GCC_BIN" >> ~/.bashrc
 echo "export PRU_SUPPORT=$PWD/pru-software-support-package" >> ~/.bashrc
