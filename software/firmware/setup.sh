@@ -30,7 +30,7 @@ echo "#PRU GCC  supports" >> ~/.bashrc
 echo "export PRU_GCC=$PRU_GCC_BIN" >> ~/.bashrc
 echo "export PRU_SUPPORT=$PWD/pru-software-support-package" >> ~/.bashrc
 echo 'export PATH=$PATH:$PRU_GCC' >> ~/.bashrc
-. ~/.bashrc
+source ~/.bashrc
 
 # 5. Patch PRU software support packages
 echo "8. Patching PRU software support packages..."
