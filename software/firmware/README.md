@@ -6,7 +6,7 @@ To test the GCC Port, run the commands below
 git clone -b gcc-cmp https://github.com/fedy0/shepherd.git
 cd shepherd/software/firmware
 chmod +x setup.sh
-source ./setup.sh pru_iep.patch
+./setup.sh pru_iep.patch
 ```
 
 0. The script above would do the following:
